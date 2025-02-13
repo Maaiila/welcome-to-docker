@@ -1,4 +1,4 @@
-# Start your image with a node base image
+ # Start your image with a node base image
 FROM node:18-alpine
 
 # The /app directory should act as the main application directory
@@ -17,7 +17,7 @@ RUN npm install \
     && npm run build \
     && rm -fr node_modules
 
-EXPOSE 3000
+EXPOSE 80
 
 # Start the app using serve command
 CMD [ "serve", "-s", "build" ]
